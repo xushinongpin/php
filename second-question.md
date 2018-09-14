@@ -1,1 +1,4 @@
-This is the answer to "How can I do X?".
+str\_replace - 以其他字符替换字符串中的一些字符（区分大小写）【 替换字符串里面的部分字符 】
+
+eg: str\_replace\('search','replace',$str\);
+
