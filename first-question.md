@@ -2,3 +2,10 @@
 
 eg: array\_column\($arr,'key'\);//返回自然排序的数组
 
+```
+//指定键的值做为键
+array_column($arr,null,'a');
+```
+
+
+
