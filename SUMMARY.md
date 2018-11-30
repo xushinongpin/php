@@ -8,5 +8,5 @@
 * [重定向扩展名](zhong-ding-xiang-kuo-zhan-ming.md)
 * [临时二维码生成](lin-shi-er-wei-ma-sheng-cheng.md)
 * [...的作用-无限极传递](de-zuo-yong.md)
-* [static-后期静态绑定（过目不忘）](statichou-qi-jing-tai-bang-ding.md)
+* [this/static/self（过目不忘）/parent](statichou-qi-jing-tai-bang-ding.md)
 
