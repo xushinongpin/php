@@ -1,6 +1,102 @@
-用过一次就已经有记忆没必要再次获取了
+# 用过一次就已经有记忆没必要再次获取了
 
-static使用例子
+
+
+有时我们需要在调用对象，类或超类中操作或调用属性和方法。为了帮助实现这一目标，我们可以使用一些我肯定会在某些时候使用的关键字。我们来解释一下：
+
+
+
+this  在这个关键字被用于指调用对象，例如：
+
+```
+class Person {
+    private $age;
+    public function __construct($age) {
+      $this->age = $age;
+    }
+}
+```
+
+如您所见，构造函数将$ age的值赋予$ this-&gt; age。这意味着，当一个对象创建一个Person类的实例时，该特定对象的age属性将是在实例化期间传递的任何参数。
+
+
+
+
+
+self  该自关键词是几乎与此相同，但它用于替代类，将只对静态属性和方法的工作。使用self关键字修改属性时，它将影响该类的所有实例。例：
+
+```
+<?php
+class Person {
+    public static $age = 15;
+
+    public function setAge($age){
+        self::$age = $age;
+    }
+
+    public function printAge(){
+        echo self::$age . "<br/>";
+    }
+}
+
+$x = new Person();
+$y = new Person();
+
+$x->setAge(30);
+$y->printAge();
+
+$y->setAge(40);
+$x->printAge();
+
+输出
+30
+40
+```
+
+在上面的代码片段中，我们定义了一个setAge方法，它将age的static属性设置为一个值，注意我们如何在这里使用self来引用该类的static属性。当我们通过类的实例的任何对象更改静态属性时，它将影响该类的所有实例，请注意上面我如何使用一个对象设置年龄并通过另一个对象打印它。
+
+**Parent**
+
+parent关键字在子类中使用，它用于调用可能在子类中重新定义的超类的实现。例：
+
+```
+<?php
+class Person {
+    private $age;
+    private $name;
+    public function __construct($age,$name){
+        $this->age = $age;
+        $this->name = $name;
+    }
+    protected function printInfo(){
+        echo $this->name . "<br/>" . $this->age . "<br/>";
+    }
+}
+class Student extends Person{
+    private $school;
+    public function __construct($age,$name,$school){
+        parent::__construct($age,$name);
+        $this->school = $school;
+    }
+    public function printStudentInfo(){
+        parent::printInfo();
+        echo $this->school . "<br/>";
+    }
+}
+$x = new Student(20,"Paul","ULA");
+$x->printStudentInfo();
+
+输出：
+Paul
+20
+ULA
+```
+
+
+
+
+
+
 
 ```
 <?php
@@ -87,7 +183,7 @@ string(2) "af"
 string(2) "af"
 ```
 
-self使用例子
+self使用例子  -- 取决于定义当前方法所在的类
 
 ```
 class selftest
@@ -115,7 +211,6 @@ for ($i=0;$i<10;$i++){
 输出
 
 ```
-
 ---------0----------
 string(1) "a"
 string(7) "a -||-a"
