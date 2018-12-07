@@ -28,17 +28,17 @@ array_column($arr,null,'a');
                     [c] => re
                     [d] => vc
                 )
-        
+
             [arr1] => Array
                 (
                     [q] => a
                     [w] => b
                 )
-        
+
             [str] => hahah
             [str1] => qwerty
         )
 ```
 
-
+array\_merge-合并一个或多个数组
 
