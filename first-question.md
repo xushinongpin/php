@@ -42,3 +42,9 @@ array_column($arr,null,'a');
 
 array\_merge-合并一个或多个数组
 
+
+
+parse\_str  把查询字符串解析到变量中  eg: "name=Bill&age=60"
+
+
+
