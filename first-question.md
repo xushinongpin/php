@@ -42,9 +42,7 @@ array_column($arr,null,'a');
 
 array\_merge-合并一个或多个数组
 
-
-
 parse\_str  把查询字符串解析到变量中  eg: "name=Bill&age=60"
 
-
+array\_unique  去掉重复数据 array\_unique\($data\);
 
