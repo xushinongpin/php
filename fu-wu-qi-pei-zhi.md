@@ -8,3 +8,5 @@ php7.3 使用 [下载地址](https://windows.php.net/downloads/pecl/snaps/redis/
 
 使用【 ts   】
 
+[参考网址](https://www.kancloud.cn/hardphp/hardphp-phper/933857)
+
