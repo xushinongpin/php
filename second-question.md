@@ -2,3 +2,11 @@
 
 eg: str\_replace\('search','replace',$str\);
 
+保留字符串中的所有数字
+
+```
+(int) filter_var('werrfwe45sdf45wf35sdf', FILTER_SANITIZE_NUMBER_INT);
+```
+
+
+
