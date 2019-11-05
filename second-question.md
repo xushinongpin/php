@@ -8,5 +8,17 @@ eg: str\_replace\('search','replace',$str\);
 (int) filter_var('werrfwe45sdf45wf35sdf', FILTER_SANITIZE_NUMBER_INT);
 ```
 
+去除标签函数 
+
+```
+strip_tags($str);
+```
+
+过滤空数组
+
+```
+array_filter($arr);
+```
+
 
 
